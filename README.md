@@ -32,7 +32,7 @@
   - 좋아요를 부여할 수 있다.
  
   ## ERD
-  ![ERD](doc/board-erd.jpg)
+  ![ERD](doc/img/Board-ERD.jpg)
 
   ## TROUBLE SHOOTING
 
