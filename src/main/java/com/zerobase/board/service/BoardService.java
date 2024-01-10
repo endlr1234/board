@@ -29,9 +29,7 @@ public class BoardService {
     }
 
 //조회
-    public List<Board> readBoardByCreatedTimeAsc(){
-        return boardRepository.findAllByOrderByCreatedTimeAsc();
-    }
+    public List<Board> readBoardByCreatedTimeAsc(){ return boardRepository.findAllByOrderByCreatedTimeAsc(); }
     public List<Board> readBoardByCreatedTimeDesc(){
         return boardRepository.findAllByOrderByCreatedTimeDesc();
     }
@@ -76,6 +74,5 @@ public class BoardService {
     public void deleteBoard(int id){
         boardRepository.deleteById(id);
     }
-
 
 }

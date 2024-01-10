@@ -2,6 +2,7 @@ package com.zerobase.board.controller;
 
 import com.zerobase.board.domain.Board;
 import com.zerobase.board.service.BoardService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,14 +16,12 @@ public class BoardController {
     }
 
     @PostMapping("/create/board")
-    void createBoard(@RequestParam String title, @RequestParam String tag, @RequestBody String text) {
-        boardService.createBoard(title, tag, text);
+    void createBoard(HttpServletRequest request) {
+        boardService.createBoard(request.getParameter("title"), request.getParameter("tag"), request.getParameter("text"));
     }
 //조회
     @GetMapping("/read/boardbycreatedtimeasc")
-    List<Board> readBoardByCreatedTimeAsc(){
-        return boardService.readBoardByCreatedTimeAsc();
-    }
+    List<Board> readBoardByCreatedTimeAsc(){ return boardService.readBoardByCreatedTimeAsc(); }
     @GetMapping("/read/boardbycreatedtimedesc")
     List<Board> readBoardByCreatedTimeDesc(){
         return boardService.readBoardByCreatedTimeDesc();
@@ -60,8 +59,8 @@ public class BoardController {
 
 //수정
     @PutMapping("/modify/board")
-    void modifyBoard(@RequestParam int id, @RequestParam String title, @RequestParam String tag, @RequestBody String text){
-        boardService.modifyBoard(id, title, tag, text);
+    void modifyBoard(HttpServletRequest request){
+        boardService.modifyBoard(Integer.parseInt(request.getParameter("id")), request.getParameter("title") , request.getParameter("tag"), request.getParameter("text"));
     }
 //삭제
     @DeleteMapping("/delete/board")
