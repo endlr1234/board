@@ -60,4 +60,14 @@ public class MemberService {
             System.out.println("Wrong information!");
         }
     }
+//회원 삭제
+    public void deleteMember(String email, String password){
+        Member member = memberRepository.getOneByEmail(email);
+
+        if(member.getEmail().equals(email) && member.getPassword().equals(password)){
+            memberRepository.deleteByEmail(email);
+        } else {
+            System.out.println("Failed to delete!");
+        }
+    }
 }

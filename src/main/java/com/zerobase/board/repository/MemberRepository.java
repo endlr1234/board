@@ -7,4 +7,6 @@ public interface MemberRepository extends JpaRepository<Member, String> {
     Member getOneByPhone(String phone);
 
     Member getOneByEmail(String email);
+
+    void deleteByEmail(String email);
 }

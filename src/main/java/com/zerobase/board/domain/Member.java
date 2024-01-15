@@ -2,6 +2,8 @@ package com.zerobase.board.domain;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,9 +14,10 @@ import java.time.LocalDateTime;
 @Data
 public class Member {
     @Id
-    String email;
-    String password;
-    String name;
-    String phone;
-    LocalDateTime signUpDate;
+    private String email;
+    private String password;
+    private String name;
+    private String phone;
+    private LocalDateTime signUpDate;
+
 }

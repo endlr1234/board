@@ -2,10 +2,7 @@ package com.zerobase.board.controller;
 
 import com.zerobase.board.service.MemberService;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class MemberController {
@@ -34,5 +31,10 @@ public class MemberController {
     @PutMapping("/change/phone")
     void changePhone(HttpServletRequest request){
         memberService.changePassword(request.getParameter("name"), request.getParameter("email"), request.getParameter("phone"), request.getParameter("password"));
+    }
+// 회원 삭제
+    @DeleteMapping("/delete/member")
+    void deleteMember(HttpServletRequest request){
+        memberService.deleteMember(request.getParameter("email"), request.getParameter("password"));
     }
 }
