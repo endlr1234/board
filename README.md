@@ -42,3 +42,60 @@
   ## TROUBLE SHOOTING
 
   ## TECH STACK
+
+  ## URL
+
+  - Root : http://localhost:8080
+  
+  - 게시판 작성 : /create/board
+    - 파라미터 : 제목, 태그, 내용
+    
+  - 게시글 조회(작성시간 오름차순) : /read/boardbycreatedtimeasc
+    
+  - 게시글 조회(작성시간 내림차순) : /read/boardbycreatedtimedesc
+    
+  - 게시글 조회(조회수 오름차순) : /read/boardbyviewsasc
+    
+  - 게시글 조회(조회수 내림차순) : /read/boardbyviewsdesc
+    
+  - 게시글 조회(제목 오름차순) : /read/boardbytitleasc
+    
+  - 게시글 조회(제목 내림차순) : /read/boardbytitledesc
+ 
+  - 게시글 검색(제목) : /find/boardbytitle
+    - 파라미터 : 제목
+
+  - 게시글 검색(태크) : /find/boardbytag
+    - 파라미터 : 태그
+   
+  - 게시글 검색(내용(포함)) : /find/boardbytext
+    - 파라미터 : 내용(포함되어있는 단어 등)
+    
+  - 게시글 수정 : /modify/board
+    - 파라미터 : 게시글Id, 제목, 태그, 내용
+    
+  - 게시글 삭제 : /delete/board
+    - 파라미터 : 게시글Id
+    
+  - 회원가입 : /create/member
+    - 파라미터 : 이메일, 비밀번호, 이름, 휴대폰번호
+  
+  - 이메일(아이디) 찾기 : /find/email
+    - 파라미터 : 이름, 휴대폰 번호
+
+  - 비밀번호 변경 : /change/password
+    - 파라미터 : 이메일, 이름, 휴대폰번호, 변경할 비밀번호
+
+  - 핸드폰 번호 변경 : /change/phone
+    - 파라미터 : 이름, 이메일, 비밀번호, 휴대폰번호
+
+
+  - 회원 삭제 : /delete/member
+    - 파라미터 : 이메일, 비밀번호
+
+  - 댓글 작성 : /comment/write
+    - 파라미터 : 댓글내용
+
+  - 댓글 삭제 : /comment/delete
+    - 파라미터 : 댓글Id
+  
