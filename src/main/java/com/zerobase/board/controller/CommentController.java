@@ -14,12 +14,12 @@ public class CommentController {
         this.commentService = commentService;
     }
 
-    @PostMapping("comment/write")
+    @PostMapping("/comment/write")
     void writeComment(@RequestBody String comment){
         commentService.writeComment(comment);
     }
 
-    @DeleteMapping("comment/delete")
+    @DeleteMapping("/comment/delete")
     void deleteComment(@RequestBody int id){
         commentService.deleteComment(id);
     }
