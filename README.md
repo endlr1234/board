@@ -37,7 +37,7 @@
   - 게시글 작성자는 댓글에 좋아요를 부여할 수 있다.
  
   ## ERD
-  ![ERD](doc/img/Board-ERD.jpg)
+  ![ERD](doc/img/Board-ERD2.jpg)
 
   ## TROUBLE SHOOTING
 
